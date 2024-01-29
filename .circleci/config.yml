@@ -337,6 +337,10 @@ jobs:
           path: test-results
 
 workflows:
+  runner_test:
+    jobs:
+      - runner-test
+
   docker_resource_class_jobs:
     jobs:
       - executor_resource_class:
