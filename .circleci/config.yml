@@ -91,6 +91,12 @@ workspaces_defaults: &workspaces_defaults
   working_directory: ~/foo/bar
 
 jobs:
+  runner-test:
+    resource_class: stuart133/test-runner
+    machine: true
+    steps:
+      - run: echo "I'm running on runner"
+  
   env-subst-example:
     executor: docker
     environment:
